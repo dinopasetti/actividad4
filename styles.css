@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+article {
+    flex: 1 1 calc(33% - 40px);
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para las imágenes en pantalla completa */
+.image-fullscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.image-fullscreen img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+    section {
+        flex-direction: column;
+    }
+
+    article {
+        flex: 1 1 100%;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Pantallas medianas */
+@media (min-width: 600px) and (max-width: 900px) {
+    section {
+        flex-wrap: wrap;
+    }
+
+    article {
+        flex: 1 1 calc(50% - 40px);
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 900px) {
+    section {
+        justify-content: space-between;
+    }
+
+    article {
+        flex: 1 1 calc(33% - 40px);
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
